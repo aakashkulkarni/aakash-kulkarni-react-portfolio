@@ -7,7 +7,6 @@ export default class PortfolioContainer extends Component {
     constructor() {
         super();
         this.state = {
-            pageTitle: "Welcome to my portfolio",
             isLoading: false,
             data: []
         };
@@ -50,14 +49,10 @@ export default class PortfolioContainer extends Component {
             return <div>Loading...</div>
         }
         return (
-            <div>
-                <h2>{this.state.pageTitle}</h2>
-
-                <button onClick={() => this.handleFilter("Consulting")}>Consulting</button>
-                <button onClick={() => this.handleFilter("Software Development")}>Software Development</button>
-                <button onClick={() => this.handleFilter("Customer Success")}>Customer Success</button>
-                <button onClick={() => this.handleFilter("Personal")}>Personal</button>
-
+            <div className="portfolio-items-wrapper">
+                <button className="btn" onClick={() => this.handleFilter("Consulting")}>Consulting</button>
+                <button className="btn" onClick={() => this.handleFilter("Software Development")}>Software Development</button>
+                <button className="btn" onClick={() => this.handleFilter("Customer Success")}>Customer Success</button>
                 {this.portfolioItems()}
             </div>
         );

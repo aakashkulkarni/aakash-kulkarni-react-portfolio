@@ -1,0 +1,10 @@
+body {
+    margin: 0px;
+    font-family: 'Archivo', sans-serif;
+    letter-spacing: 2px;
+}
+
+.container {
+    display: grid;
+    grid-template-columns: 1fr;
+}
